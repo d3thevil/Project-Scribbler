@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Posts</title>
+    <link rel="stylesheet" href="/Users/abhishekkumar/Desktop/Course+6+Project+Stub+-+Scribbler/styles/postslist.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montez&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+</head>
+<body>
+    <header class="site-header" id="nonAuthHeader">
+        <div class="logo-container">
+          <div class="logo">ScriBBler</div>
+          <div class="sub-heading">Explore, Imagine, Create</div>
+        </div>
+        <div class="header-buttons">
+          <button id="signUpBtn">Sign Up</button>
+          <button id="signInBtn">Sign In</button>
+        </div>
+      </header>
+      <br>
+      <br>
+    <!-- list of all posts starts here -->
+    <div class="main">
+        <!-- post 1 starts here -->
+        <div class="post" data-post-id="1">
+          <div class="username">
+            <p style="text-align: center;
+            position: relative;
+            top: 41px;">Srishti Gupta</p>
+          </div>
+          <div class="post-content">
+            <div class="post-heading">
+              <p>‘let’ me be a ‘const’(ant), not a ‘var’(iable)!</p>
+              <span class="delete-icon"><i class="fas fa-trash"></i></span>
+            </div>
+            <div class="post-text">
+              <p>Since JavaScript does not have any type-checking, either of these keywords can be used to declare a variable of any type (datatype) in JavaScript. Though all the three keywords are used for the same purpose, they are different.</p>
+            </div>
+            <span class="ellipsis-icon" onclick="redirectToPostDetails(this)"><i class="fas fa-ellipsis-h"></i></span>
+          </div>
+        </div>
+        <!-- post 1 ends here -->
+      
+        <!-- post 2 starts here -->
+        <div class="post">
+          <div class="username">
+            <p style="text-align: center;
+            position: relative;
+            top: 41px;">Colby Fayock</p>
+          </div>
+          <div class="post-content">
+            <div class="post-heading">
+              <p>What is linting and how can it save you time?</p>
+              <span class="delete-icon"><i class="fas fa-trash"></i></span>
+            </div>
+            <div class="post-text">
+              <p>One of the biggest challenges in software development is time. It’s something we can’t easily get more of, but linting can help us make the most out of the time we have.</p>
+            </div>
+            <span class="ellipsis-icon" onclick="redirectToPostDetails(this)"><i class="fas fa-ellipsis-h"></i></span>
+          </div>
+        </div>
+        <!-- post 2 ends here -->
+      
+        <!-- post 3 starts here -->
+        <div class="post">
+          <div class="username">
+            <p style="text-align: center;position: relative;top: 41px;">Yazeed Bzadough</p>
+          </div>
+          <div class="post-content">
+            <div class="post-heading">
+              <p >How to Get More Views on Your Tech Blog</p>
+              <span class="delete-icon"><i class="fas fa-trash"></i></span>
+            </div>
+            <div class="post-text">
+              <p>If you're a developer with a Twitter account, you've already seen everyone and their cat start a blog, YouTube channel, or Patreon. We all want to become stars, or at the very least, a recognizable name in the industry.</p>
+            </div>
+            <span class="ellipsis-icon" onclick="redirectToPostDetails(this)"><i class="fas fa-ellipsis-h"></i></span>
+          </div>
+        </div>
+        <!-- post 3 ends here -->
+      
+        <!-- post 4 starts here -->
+        <div class="post">
+          <div class="username">
+            <p style="text-align: center;
+            position: relative;
+            top: 51px;">Cedd Burge</p>
+          </div>
+          <div class="post-content">
+            <div class="post-heading">
+              <p>How to write easily describable code</p>
+              <span class="delete-icon"><i class="fas fa-trash"></i></span>
+            </div>
+            <div class="post-text">
+              <p>When code is not describable using words, most people have to do some mental mapping to turn it in to words. This wastes mental energy, and you run the risk of getting the mapping wrong. Different people will map to different words, which leads to confusion when discussing the code.</p>
+            </div>
+            <span class="ellipsis-icon" onclick="redirectToPostDetails(this)"><i class="fas fa-ellipsis-h"></i></span>
+          </div>
+        </div>
+        <!-- post 4 ends here -->
+      
+        <!-- post 5 starts here -->
+        <div style="position: relative;right: -287px;" class="post">
+          <div style="height: 138px;" class="username">
+            <p style="text-align: center;position: relative;top: 41px;">Srishti Gupta</p>
+          </div>
+          <div class="post-content">
+            <div class="post-heading">
+              <p>Everything you should know about ‘module’ & ‘require’ in Node.js</p>
+              <span class="delete-icon"><i class="fas fa-trash"></i></span>
+            </div>
+            <div class="post-text">
+              <p>Node.js treats each JavaScript file as a separate module. For instance, if you have a file containing some code and this file is named xyz.js, then this file is treated as a module in Node, and you can say that you’ve created a module named xyz.</p>
+            </div>
+            <span class="ellipsis-icon" onclick="redirectToPostDetails(this)"><i class="fas fa-ellipsis-h"></i></span>
+          </div>
+        </div>
+        <!-- post 5 ends here -->
+      </div>
+      <div id="deleteModal" class="modals">
+        <div class="modals-content">
+          <span class="closes-button">&times;</span>
+          <p>Are you sure you want to delete the post?</p>
+          <button id="yesButton" class="greens-button">Yes</button>
+          <button id="noButton" class="red-button">No</button>
+        </div>
+      </div>
+      <div class="modal" id="signUpModal">
+        <div class="modal-content">
+          <span class="close-button" id="closeSignUpModalBtn">&times;</span>
+          <button class="exit-button" id="exitFromSignUp">Exit to Homepage</button>
+          <h2>Get Started</h2>
+          <form id="signUpForm">
+            <input class = "input-same" style="padding: 7px; margin-bottom: 20px;" type="text" placeholder="Enter your name" required>
+            <input class = "input-same" style="padding: 7px; margin-bottom: 20px;" type="text" placeholder="Enter your username" required>
+            <input class = "input-same" style="padding: 7px; margin-bottom: 20px;" type="password" placeholder="Enter your password" required>
+            <input class = "input-same" style="padding: 7px; margin-bottom: 20px;" type="password" placeholder="Re-enter your password" required>
+            <input class = "input-same1" style="padding: 7px; margin-bottom: 20px;" type="submit" class="green-button" value="Sign Up">
+          </form>
+        </div>
+      </div>
+      <div class="modal" id="signInModal">
+        <div class="modal-content">
+          <span class="close-button" id="closeSignInModalBtn">&times;</span>
+          <button class="exit-button" id="exitFromSignIn">Exit to Homepage</button>
+          <h2>Welcome Back!</h2>
+          <form id="signInForm">
+            <input class = "input-same" style="padding: 7px; margin-bottom: 20px;" type="text" placeholder="Enter your username" required>
+            <input class = "input-same" style="padding: 7px; margin-bottom: 20px;" type="password" placeholder="Enter your password" required>
+            <input class = "input-same1" type="submit" class="green-button" value="Sign In">
+          </form>
+          <div id="switchToSignUp">
+            <span style="color: black;">Not a member?</span>
+            <a href="#" id="switchToSignUpLink" style="color: blue; text-decoration: underline;">Sign Up</a>
+          </div>
+        </div>
+      </div>
+    <script src="/Users/abhishekkumar/Desktop/Course+6+Project+Stub+-+Scribbler/scripts/postslist.js"></script>
+</body>
+
+</html>

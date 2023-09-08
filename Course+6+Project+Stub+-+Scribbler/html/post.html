@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ScriBBler</title>
+  <link href="https://fonts.googleapis.com/css?family=Montez&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/Users/abhishekkumar/Desktop/Course+6+Project+Stub+-+Scribbler/styles/post.css">
+</head>
+<body>
+  <header class="site-header" id="nonAuthHeader">
+    <div class="logo-container">
+      <div class="logo">ScriBBler</div>
+      <div class="sub-heading">Explore, Imagine, Create</div>
+    </div>
+    <div class="header-buttons">
+      <button id="signUpBtn">Sign Up</button>
+      <button id="signInBtn">Sign In</button>
+    </div>
+  </header>
+  <div class="modal" id="signUpModal">
+    <div class="modal-content">
+      <span class="close-button" id="closeSignUpModalBtn">&times;</span>
+      <button class="exit-button" id="exitFromSignUp">Exit to Homepage</button>
+      <h2>Get Started</h2>
+      <form id="signUpForm">
+        <input class = "input-same" style="padding: 7px; margin-bottom: 20px;" type="text" placeholder="Enter your name" required>
+        <input class = "input-same" style="padding: 7px; margin-bottom: 20px;" type="text" placeholder="Enter your username" required>
+        <input class = "input-same" style="padding: 7px; margin-bottom: 20px;" type="password" placeholder="Enter your password" required>
+        <input class = "input-same" style="padding: 7px; margin-bottom: 20px;" type="password" placeholder="Re-enter your password" required>
+        <input class = "input-same1" style="padding: 7px; margin-bottom: 20px;" type="submit" class="green-button" value="Sign Up">
+      </form>
+    </div>
+  </div>
+  <div class="modal" id="signInModal">
+    <div class="modal-content">
+      <span class="close-button" id="closeSignInModalBtn">&times;</span>
+      <button class="exit-button" id="exitFromSignIn">Exit to Homepage</button>
+      <h2>Welcome Back!</h2>
+      <form id="signInForm">
+        <input class = "input-same" style="padding: 7px; margin-bottom: 20px;" type="text" placeholder="Enter your username" required>
+        <input class = "input-same" style="padding: 7px; margin-bottom: 20px;" type="password" placeholder="Enter your password" required>
+        <input class = "input-same1" type="submit" class="green-button" value="Sign In">
+      </form>
+      <div id="switchToSignUp">
+        <span style="color: black;">Not a member?</span>
+        <a href="#" id="switchToSignUpLink" style="color: blue; text-decoration: underline;">Sign Up</a>
+      </div>
+    </div>
+  </div>
+  <header>
+    <h1 id="post-title"contenteditable="false">Everything you should know about 'module' & 'require' in Node.js</h1>
+  </header>
+  <main class="post-container">
+    <div class="author-edit-container">
+      <span id="post-author" style="font-size: 28px;">Srishti</span>
+      <button id="edit-button" onclick="toggleEditMode()">
+        Edit <i class="fas fa-edit"></i>
+      </button>
+    </div>
+    <div class="post-detail">
+      <!-- <h2 id="post-title" contenteditable="false">Post Title</h2> -->
+      <p id="post-description" contenteditable="false">In the world of Node.js, understanding the fundamentals of 'module' and 'require' is paramount. These two concepts lie at the core of Node.js's modular architecture, facilitating the organization and reuse of code. A 'module' in Node.js is essentially a self-contained unit of code, encapsulating functions, variables, and other components. It fosters modularity and maintains clean codebases. On the other hand, 'require' is the magic keyword that allows you to include these modules into your application. It acts as a bridge, enabling you to access the functionalities defined within a module. Together, 'module' and 'require' empower Node.js developers to build scalable, maintainable applications by breaking down complex systems into manageable, reusable components. This fundamental duo paves the way for efficient development and has become the cornerstone of Node.js's success in building server-side applications. n Node.js, a module is essentially a JavaScript file that encapsulates a piece of code with its own scope. Modules are crucial for organizing code into reusable components, promoting better code organization, and preventing variable and function name clashes between different parts of your application. Node.js has a built-in module system that allows you to create your own modules and also use modules provided by the Node.js core or third-party libraries. Commonly, a module may export functions, classes, or objects that can be used in other parts of your code. The 'require' function is a core feature of Node.js that facilitates the loading of modules into your application. When you use 'require', you provide the path to the module you want to include. Node.js will search for the module in a predefined order, including built-in modules, modules installed via npm (Node Package Manager), and modules from your local project. Once found, the 'require' function returns the module's exports, which you can then use in your code.To make a value (such as a function, object, or variable) available for use in other parts of your application, you must export it from a module. Node.js provides several ways to export from a module. The most common approach is using the 'module.exports' or 'exports' object.</p>
+    </div>
+  </main>
+  <button id="like-button" onclick="likePost()">
+    <i class="fas fa-thumbs-up"></i> Like
+  </button>
+  
+  <div id="like-count">Be the first one to like this!</div>
+
+
+  <div id="comment-section">
+    <input id="comment-input" type="text" placeholder="Leave a comment..." />
+    <button id="comment-button" class="comment-button" onclick="addComment()">Comment</button>
+    <div id="all-comments" class="all-comments">
+      <!-- Comments will be added here -->
+    </div>
+  </div>
+  <script src="/Users/abhishekkumar/Desktop/Course+6+Project+Stub+-+Scribbler/scripts/post.js"></script>
+</body>
+</html>

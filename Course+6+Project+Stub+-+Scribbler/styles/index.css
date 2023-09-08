@@ -1,0 +1,248 @@
+body {
+    background-image: url('/Users/abhishekkumar/Desktop/Course+6+Project+Stub+-+Scribbler/images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  .site-header {
+    /* background-color: #f2f2f2; */
+    color: blue;
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+  }
+  .site-header .logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 1em;
+  }
+  .site-header .logo {
+    font-family: 'Montez', cursive;
+    font-size: 2.5em;
+  }
+  .site-header .sub-heading {
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: 1.2em;
+    color: black;
+  }
+  .header-buttons button, .middle-buttons button, .green-button, .exit-button {
+    margin: 0.5em;
+    padding: 0.5em 1em;
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+    border-radius: 0.3em;
+    transition: background-color 0.3s ease;
+  }
+  .header-buttons button {
+      background-color: blue;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+
+  }
+  .header-buttons button:hover {
+    background-color: #777;
+  }
+  .middle-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 4em);
+  }
+  .middle-buttons button {
+    background-color: #FFA500;
+    border: none;
+    color: black;
+    padding: 15px 25px;
+    text-align: center;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+  }
+  .middle-buttons button:hover {
+    background-color: #FFD700;
+  }
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+  }
+  .modal-content {
+    background-color: white;
+    padding: 43px 47px;
+    border-radius: 206px;
+    width: 142px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: -38px;
+  }
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+  .green-button {
+    background-color: green;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+    border: none;
+  }
+  .exit-button {
+    background-color: red;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 14px;
+  margin: 10px 0;
+  cursor: pointer;
+  align-self: flex-end;
+}
+  #switchToSignUp {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 10px; /* optional, for additional spacing */
+  }
+  #switchToSignUp span,#switchToSignUp a {
+      margin: 0 5px; /* optional, for spacing between elements */
+  }
+  #switchToSignUpLink:hover {
+      text-decoration: none;
+      color: darkblue;
+  }
+  .modal-content label {
+      display: block;
+      margin-bottom: 5px;
+  }
+  textarea#postContents {
+      width: 80%;
+      height: 100px;
+      margin-bottom: 20px;
+  }
+
+  /* text new css  */
+
+
+  /* Outer Modal Styles */
+.modal1 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  background-color: rgba(0,0,0,0.7); /* Semi-transparent background */
+  display: none;
+}
+
+.modal1-content {
+  width: 70%;
+  height: 70%;
+  background-color: #fff; 
+  padding: -5px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: auto; /* In case the content becomes too much */
+}
+
+/* Close and Exit Buttons */
+.close1-button {
+  border: none;
+  color: #777;
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bolder;
+  margin: 10px 0;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+.close1-button {
+  top: 10px;
+  right: 40px;
+}
+
+/* Form Styles */
+#createPostForm {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  align-items: flex-start;
+
+}
+
+.input-same {
+    width: 80%;
+    margin: 10px 0;
+    padding: 17px;
+    border: none;
+    background-color: #f1ebeb;
+}
+
+.green1-button {
+  background-color: #4CAF50; /* Green Color */
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-left: 300px;
+}
+
+.green1-button:hover {
+  background-color: #45a049;
+}
+.textarea-same {
+  width: 100%;
+  margin: 10px 0;
+  padding: 17px;
+  resize: vertical; 
+  background-color: #f1ebeb;
+}
+.modal1-content h2 {
+  align-self: flex-start;
+  width: 80%;
+  padding-left: 98px;
+  color: grey;
+  font-size: 25px;
+  font-family: Arial;
+  
+  
+}
+.modal-divider {
+  width: 80%;  
+  border: none;  
+  border-top: 2px solid #777;  
+  margin: 15px 0;  
+
+}
+
+

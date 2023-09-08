@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ScriBBler</title>
+  <link href="https://fonts.googleapis.com/css?family=Montez&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/Users/abhishekkumar/Desktop/Course+6+Project+Stub+-+Scribbler/styles/index.css">
+</head>
+<body>
+  <header class="site-header" id="nonAuthHeader">
+    <div class="logo-container">
+      <div class="logo">ScriBBler</div>
+      <div class="sub-heading">Explore, Imagine, Create</div>
+    </div>
+    <div class="header-buttons">
+      <button id="signUpBtn">Sign Up</button>
+      <button id="signInBtn">Sign In</button>
+    </div>
+  </header>
+  <div class="modal" id="signUpModal">
+    <div class="modal-content">
+      <span class="close-button" id="closeSignUpModalBtn">&times;</span>
+      <button class="exit-button" id="exitFromSignUp">Exit to Homepage</button>
+      <h2>Get Started</h2>
+      <form id="signUpForm">
+        <input class = "input-same" style="padding: 7px; margin-bottom: 20px;" type="text" placeholder="Enter name" required>
+        <input class = "input-same" style="padding: 7px; margin-bottom: 20px;" type="text" placeholder="Enter username" required>
+        <input class = "input-same" style="padding: 7px; margin-bottom: 20px;" type="password" placeholder="Enter password" required>
+        <input class = "input-same" style="padding: 7px; margin-bottom: 20px;" type="password" placeholder="Re-enter password" required>
+        <input  style="padding: 7px; margin-bottom: 20px; width: 116px;" type="submit" class="green-button" value="Sign Up">
+      </form>
+    </div>
+  </div>
+  <div class="modal" id="signInModal">
+    <div class="modal-content">
+      <span class="close-button" id="closeSignInModalBtn">&times;</span>
+      <button class="exit-button" id="exitFromSignIn">Exit to Homepage</button>
+      <h2>Welcome Back!</h2>
+      <form id="signInForm">
+        <input class = "input-same" style="padding: 7px; margin-bottom: 20px;" type="text" placeholder="Enter your username" required>
+        <input class = "input-same" style="padding: 7px; margin-bottom: 20px;" type="password" placeholder="Enter your password" required>
+        <input style="padding: 7px; margin-bottom: 20px; width: 116px;" type="submit" class="green-button" value="Sign In">
+      </form>
+      <div id="switchToSignUp">
+        <span style="color: black;">Not a member?</span>
+        <a href="#" id="switchToSignUpLink" style="color: blue; text-decoration: underline;">Sign Up</a>
+      </div>
+    </div>
+  </div>
+  <main>
+    <div class="middle-buttons">
+      <button id="allPostsBtn" onclick="window.location.href='/Users/abhishekkumar/Desktop/Course+6+Project+Stub+-+Scribbler/html/postslist.html'">All Posts</button>
+      <button id="createPostBtn">Create Post</button>
+    </div>
+    <!-- Create Post Modal -->
+    <div class="modal1" id="createPostModal">
+        <div class="modal1-content">
+            <span class="close1-button" id="closeCreatePostModalBtn">&times;</span>
+            <h2>Pen Your Post</h2>
+            <hr class="modal-divider">
+            <form id="createPostForm">
+                <label for="postTitle">Title</label>
+                <input class = "input-same" type="text" id="postTitle" placeholder="Enter title of your post">
+                <label for="postContents">Contents</label>
+                <textarea id="postContents" class="textarea-same" rows="5" placeholder="Enter your content here..."></textarea>
+                <input type="submit" class="green1-button" value="Create">
+            </form>
+        </div>
+    </div>
+  
+  </main>
+  <script src="/Users/abhishekkumar/Desktop/Course+6+Project+Stub+-+Scribbler/scripts/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,257 @@
+/* postslist.css */
+body{
+    background-color: #ffeedd;
+    background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      margin: 0;
+      padding: 0;
+     font-family: Arial, sans-serif;
+}
+.site-header {
+    color: blue;
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+  }
+  .site-header .logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 1em;
+  }
+  .site-header .logo {
+    font-family: 'Montez', cursive;
+    font-size: 2.5em;
+  }
+  .site-header .sub-heading {
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: 1.2em;
+    color: black;
+  }
+  .header-buttons button, .middle-buttons button, .green-button, .exit-button {
+    margin: 0.5em;
+    padding: 0.5em 1em;
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+    border-radius: 0.3em;
+    transition: background-color 0.3s ease;
+  }
+  .header-buttons button {
+      background-color: blue;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+
+  }
+  .header-buttons button:hover {
+    background-color: #777;
+  }
+  .main {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    margin-left: 10px;
+    justify-content: space-between;
+    flex-wrap: wrap; 
+  }
+  .post {
+    display: flex;
+      align-items: flex-start;
+      width: calc(50% - 10px);
+      margin-bottom: 20px;
+      box-sizing: border-box;
+  }
+  .username {
+    flex: 1;
+      max-width: 25%;
+      background-color: #fff;
+      height: 137px;
+      text-align: center;
+      position: relative;
+  }
+  /* @media (max-width: 600px) {
+    .post {
+      flex: 0 0 100%;
+    }
+  } */
+  .post-content {
+    flex: 3;
+    max-width: 85%;
+    background-color: lightgrey;
+  }
+  .post-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .post-text p {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .post:hover {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  .header-buttons button:hover, .post:hover .post-heading p {
+    color: #fff;
+  }
+  .post {
+    border-radius: 15px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  }
+  .username, .post-content {
+    border-radius: 15px 0 0 15px; 
+  }
+  .post-content {
+    border-radius: 0 15px 15px 0;
+  }
+  
+  .post:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  .delete-icon {
+    cursor: pointer;
+  }
+  .post-heading {
+    position: relative;
+  }
+  .delete-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #777;
+    margin-top: 5px; 
+    margin-right: 8px; 
+  }
+  .ellipsis-icon {
+    cursor: pointer;
+    float: right;
+    margin-top: -5px; 
+    margin-right: 5px; 
+    color: #777;
+  }
+  .modals {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+  }
+  .modals-content {
+    position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: auto;
+  padding: 20px;
+  width: 40%;
+  background-color: #fff;
+  text-align: center;
+  }
+  .closes-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+  }
+  .greens-button {
+    background-color: green;
+    color: white;
+  }
+  .red-button {
+    background-color: red;
+    color: white;
+  }
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+  }
+  .modal-content {
+    background-color: white;
+    padding: 43px 47px;
+    border-radius: 206px;
+    width: 142px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: -38px;
+  }
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+  .green-button {
+    background-color: green;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+    border: none;
+  }
+  .exit-button {
+      background-color: red;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 14px;
+    margin: 10px 0;
+    cursor: pointer;
+    align-self: flex-end;
+  }
+  #switchToSignUp {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 10px; /* optional, for additional spacing */
+  }
+  #switchToSignUp span,#switchToSignUp a {
+      margin: 0 5px; /* optional, for spacing between elements */
+  }
+  #switchToSignUpLink:hover {
+      text-decoration: none;
+      color: darkblue;
+  }
+  .modal-content label {
+      display: block;
+      margin-bottom: 5px;
+  }
+  .input-same{
+    padding: 20px;
+    background-color: #f1ebeb;
+    border: none;
+    
+}
+.input-same1{
+    cursor: pointer;
+    background-color: green;
+    border: none;
+    color: white;
+    width: 100%;
+    height: 40%;
+    padding-top: 9px ;
+    padding-bottom: 9px ;
+
+
+ }
